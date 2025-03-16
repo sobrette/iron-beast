@@ -16,9 +16,10 @@ class Router {
 
   handleRouteChange() {
     let hash = window.location.hash.slice(1) || "/"; // Remove `#` and ensure `/` if empty
-    console.log("Current route hash:", hash);
+    console.log(hash);
 
     const route = this.routes[hash];
+    console.log(route);
     if (route) {
       route();
     } else {

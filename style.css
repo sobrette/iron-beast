@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Tidore";
-  src: url("../src/font/tidoredemo.ttf");
+  src: url("./src/font/tidoredemo.ttf");
 }
 
 .brand {
@@ -20,7 +20,7 @@
 }
 
 .banner {
-  background: url("../src/img/banner.jpg");
+  background: url("src/img/banner.jpg");
   background-size: cover;
   display: flex;
   min-height: 100vh;
