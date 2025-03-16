@@ -1,0 +1,247 @@
+@font-face {
+  font-family: "Tidore";
+  src: url("../src/font/tidoredemo.ttf");
+}
+
+.brand {
+  font-family: "Tidore";
+}
+
+.navbar-brand {
+  margin-left: 1.5rem;
+}
+
+.nav-item {
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.5px;
+}
+
+.banner {
+  background: url("../src/img/banner.jpg");
+  background-size: cover;
+  display: flex;
+  min-height: 100vh;
+  background-position: center;
+}
+
+.about-us {
+  height: 100%;
+  max-height: 100vh;
+  display: flex;
+  background-color: #1a1e23;
+}
+
+.banner h1 {
+  font-family: "Dosis", sans-serif;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+#content {
+  width: 100%;
+  margin: 4rem 0 0 4rem;
+}
+
+#mission-values {
+  display: flex;
+  padding-top: 2rem;
+  background-color: #1a1e23;
+  color: white;
+}
+
+#mission-values h1 {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.fitness-header {
+  text-align: center; /* Centers the content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+#mission-values p {
+  text-align: justify;
+  font-size: 1rem;
+}
+
+.content {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.carousel {
+  display: grid;
+  grid-auto-flow: column;
+  scroll-behavior: auto;
+  gap: 1.2rem;
+  overflow-y: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.item {
+  scroll-snap-align: start;
+  min-height: 400px;
+  min-width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+footer {
+  background: #242830;
+  color: #fff;
+  width: 100%;
+  position: relative;
+}
+
+footer h1 {
+  font-family: "Dosis", sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.footer-info {
+  text-align: center;
+  width: 75%;
+}
+
+.trial-btn {
+  background-color: #f75e2b;
+  color: #fff;
+  text-transform: uppercase;
+}
+.about-card {
+  /* From https://css.glass */
+  background: rgba(36, 40, 48, 0.38);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.2px);
+  -webkit-backdrop-filter: blur(6.2px);
+  border: 1px solid rgba(36, 40, 48, 0.12);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.about-card p {
+  color: #fff;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+}
+
+.about-card h1 {
+  font-family: "Dosis", sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.programs {
+  min-height: 100vh;
+  display: flex;
+  background-color: #1a1e23;
+  font-family: "Lato", sans-serif;
+  color: #fff;
+  text-align: justify;
+}
+
+.programs h1 {
+  font-family: "Dosis", sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.classes {
+  min-height: 100vh;
+  display: flex;
+  background-color: #1a1e23;
+}
+
+.classes h1 {
+  font-family: "Dosis", sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.classes h4 {
+  font-family: "Lato", sans-serif;
+  color: #fff;
+  font-size: 1rem;
+}
+
+h3 {
+  font-family: "Dosis", sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.classes h2 {
+  font-family: "Dosis", sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.card {
+  background: rgba(36, 40, 48, 0.38);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.2px);
+  -webkit-backdrop-filter: blur(6.2px);
+  color: #fff;
+}
+
+.card-title {
+  font-family: "Dosis", sans-serif;
+  color: #f75e2b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card .btn {
+  width: 100%;
+  background-color: #f75e2b;
+  border: 0px;
+}
+
+.trainers {
+  min-height: 100vh;
+  display: flex;
+  background-color: #1a1e23;
+  font-family: "Lato", sans-serif;
+  color: #fff;
+  text-align: justify;
+}
+
+.trainers h2 {
+  font-family: "Dosis", sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  text-transform: uppercase;
+}
