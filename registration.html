@@ -26,6 +26,7 @@
       }
 
       function displayInfo(formType) {
+        let errorMessage = "";
         if (formType === "membership") {
           let fullName = document.getElementById("fullName").value;
           let email = document.getElementById("email").value;
@@ -34,17 +35,33 @@
             'input[name="gender"]:checked'
           ).value;
           let package = document.getElementById("membership").value;
-          let medical = document.getElementById("medical").value;
 
-          let message = `Full Name: ${fullName}\nEmail: ${email}\nContact: ${contact}\nGender: ${gender}\nMembership Package: ${package}\nMedical Condition: ${medical}`;
-          alert(message);
+          if (
+            fullName === "" ||
+            email === "" ||
+            contact === "" ||
+            gender === "" ||
+            package === ""
+          ) {
+            errorMessage = "Please enter values";
+          } else {
+            let message = `Full Name: ${fullName}\nEmail: ${email}\nContact: ${contact}\nGender: ${gender}\nMembership Package: ${package}\n`;
+            alert(message);
+          }
         } else {
           let fullName = document.getElementById("classFullName").value;
           let email = document.getElementById("classEmail").value;
           let classSelected = document.getElementById("classSelection").value;
 
-          let message = `Full Name: ${fullName}\nEmail: ${email}\nClass Selected: ${classSelected}`;
-          alert(message);
+          if (fullName === "" || email === "" || classSelected === "") {
+            errorMessage = "Please enter values";
+          } else {
+            let message = `Full Name: ${fullName}\nEmail: ${email}\nClass Selected: ${classSelected}`;
+            alert(message);
+          }
+        }
+        if (errorMessage !== "") {
+          alert(errorMessage);
         }
       }
     </script>
@@ -75,25 +92,25 @@
         <form onsubmit="event.preventDefault(); displayInfo('membership');">
           <div class="mb-3">
             <label class="form-label">Full Name</label>
-            <input type="text" id="fullName" class="form-control" required />
+            <input type="text" id="fullName" class="form-control" />
           </div>
           <div class="mb-3">
             <label class="form-label">Email</label>
-            <input type="email" id="email" class="form-control" required />
+            <input type="email" id="email" class="form-control" />
           </div>
           <div class="mb-3">
             <label class="form-label">Contact Number</label>
-            <input type="tel" id="contact" class="form-control" required />
+            <input type="tel" id="contact" class="form-control" />
           </div>
           <div class="mb-3">
             <label class="form-label">Gender</label><br />
-            <input type="radio" name="gender" value="Male" required /> Male
+            <input type="radio" name="gender" value="Male" /> Male
             <input type="radio" name="gender" value="Female" /> Female
             <input type="radio" name="gender" value="Other" /> Other
           </div>
           <div class="mb-3">
             <label class="form-label">Membership Package</label>
-            <select id="membership" class="form-control" required>
+            <select id="membership" class="form-control">
               <option value="Basic Membership">Basic Membership</option>
               <option value="Premium Membership">Premium Membership</option>
               <option value="Elite Membership">Elite Membership</option>
@@ -118,20 +135,15 @@
         <form onsubmit="event.preventDefault(); displayInfo('class');">
           <div class="mb-3">
             <label class="form-label">Full Name</label>
-            <input
-              type="text"
-              id="classFullName"
-              class="form-control"
-              required
-            />
+            <input type="text" id="classFullName" class="form-control" />
           </div>
           <div class="mb-3">
             <label class="form-label">Email</label>
-            <input type="email" id="classEmail" class="form-control" required />
+            <input type="email" id="classEmail" class="form-control" />
           </div>
           <div class="mb-3">
             <label class="form-label">Select Class</label>
-            <select id="classSelection" class="form-control" required>
+            <select id="classSelection" class="form-control">
               <option value="HIIT">HIIT</option>
               <option value="Yoga">Yoga</option>
               <option value="Spinning">Spinning</option>
